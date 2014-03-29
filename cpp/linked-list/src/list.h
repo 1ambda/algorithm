@@ -14,5 +14,6 @@ public:
     bool remove(int index);
     bool get(int index, int* result);
     bool isEmpty(void);
+    void erase(void);
 };
 

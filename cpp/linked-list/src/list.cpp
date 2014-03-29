@@ -10,7 +10,25 @@ List::List()
 
 List::~List()
 {
-    delete head;
+    erase();
+}
+
+void List::erase(void) {
+
+    if (size == 0) {
+        return;
+    }
+
+    Node* current = head;
+
+    while(current != nullptr) {
+        Node* temp = current;
+        current = current->next;
+        delete temp;
+    }
+
+    head = nullptr;
+    size = 0;
 }
 
 void List::traverse(void)

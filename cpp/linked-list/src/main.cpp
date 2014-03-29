@@ -12,12 +12,14 @@ int main(int argc, char *argv[])
     l.insert(4);
     l.insert(5);
     l.insert(6);
+    l.traverse();
 
-    int result = 0;
+    l.erase();
+    l.traverse();
 
-    if (l.get(3, &result)) {
-        std::cout << result << std::endl;
-    }
+    l.insert(3);
+    l.traverse();
+
     
     return 0;
 }
