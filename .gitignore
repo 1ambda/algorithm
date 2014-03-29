@@ -1,0 +1,6 @@
+cscope.out
+cscope.files
+*.exe
+*.stackdump
+*.o
+!.gitkeep
