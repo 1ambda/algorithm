@@ -43,7 +43,21 @@ List<T>::~List()
 
 template <typename T>
 void List<T>::erase(void) {
-    
+    if(is_empty()) {
+        return;
+    }
+
+    Node<T>* current = head;
+
+    while(current != nullptr) {
+        Node<T>* temp = current->next;
+        delete current;
+        current = temp;
+    }
+
+    head = nullptr;
+    tail = nullptr;
+    size = 0;
 }
 
 template <typename T>

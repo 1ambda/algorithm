@@ -14,18 +14,17 @@ int main(int argc, char *argv[])
     l.insert_last(8);
     l.traverse();
 
-    std::cout << "remove" << std::endl;
-    l.insert(3, 1);
-    l.traverse();
-    std::cout << "remove" << std::endl;
-    l.insert(0, 0);
-    l.traverse();
-    std::cout << "remove" << std::endl;
-    l.insert(9, 6);
+    std::cout << "erase" << std::endl;
+    l.erase();
     l.traverse();
 
-    std::cout << "reverse" << std::endl;
-    l.reverse();
+    std::cout << "insert" << std::endl;
+    l.erase();
+    l.insert_last(2);
+    l.insert_last(4);
+    l.insert_last(6);
+    l.insert_last(7);
+    l.insert_last(8);
     l.traverse();
         
     return 0;
