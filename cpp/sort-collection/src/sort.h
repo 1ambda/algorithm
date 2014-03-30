@@ -14,9 +14,11 @@ public:
     static bool selection(T* arr, size_t length, function<bool(T& l, T& r)>& comparator);
     static bool insertion(T* arr, size_t length, function<bool(T& l, T& r)>& comparator);
     static bool merge(T* arr, int length, function<bool(T&, T&)>& comparator);
+    static bool quick(T* arr, int length, function<bool(T&, T&)>& comparator);
 
 private:
     static void internal_merge(T* arr, int length, function<bool(T&, T&)>& comparator);
+    static void internal_quick(T* arr, int first, int last, function<bool(T&, T&)>& comparator);
 };
 
 template <typename T>
@@ -40,21 +42,22 @@ bool Sort<T>::bubble(T* arr, size_t length, function<bool(T&, T&)>& comparator) 
         return false;
     }
 
-    bool flag = false;
+    bool sorted;
     
     for(int i = length; i >1; i--) {
-        flag = false;
+        sorted = true;
         
         for(int j = 0; j < i - 1; j++) {
             if (comparator(arr[j], arr[j+1])) {
                 T* temp = new T(arr[j]);
                 arr[j] = arr[j+1];
                 arr[j+1] = *temp;
-                flag = true;
+                sorted = false;
+                delete temp;
             }
         }
 
-        if (flag) {
+        if (sorted) {
             break;
         }
     }
@@ -79,6 +82,7 @@ bool Sort<T>::selection(T* arr, size_t length, function<bool(T&, T&)>& comparato
                 T* temp = new T(arr[j]);
                 arr[j] = arr[i];
                 arr[i] = *temp;
+                delete temp;
             }
         }
     }
@@ -106,9 +110,55 @@ bool Sort<T>::insertion(T* arr, size_t length, function<bool(T&, T&)>& comparato
             arr[j+1] = arr[j];
 
         arr[j+1] = *temp;
+        delete temp;
     }
 
     return true;
+}
+
+template <typename T>
+bool Sort<T>::quick(T* arr, int length, function<bool(T&, T&)>& comparator) {
+    if(arr == nullptr) {
+        return false;;
+    }
+
+    if (length <= 1) {
+        return false;
+    }
+
+    Sort<T>::internal_quick(arr, 0, length - 1, comparator);
+    
+    return true;
+}
+
+// ref : http://www.algolist.net/Algorithms/Sorting/Quicksort
+template <typename T>
+void Sort<T>::internal_quick(T* arr, int left, int right, function<bool(T&, T&)>& f) {
+
+    int i = left;
+    int j = right;
+    int pivot = (left + right) / 2;
+
+    while (i <= j) {
+        while(f(arr[pivot], arr[i])) i++;
+        while(f(arr[j], arr[pivot])) j--;
+
+        if (i <= j) {
+            T* temp = new T(arr[j]);
+            arr[j] = arr[i];
+            arr[i] = *temp;
+            delete temp;
+            i++; j--;
+        }
+    }
+
+    if (left < j) {
+        internal_quick(arr, left, j, f);
+    }
+
+    if (i < right) {
+        internal_quick(arr, i, right, f);
+    }
 }
 
 template <typename T>
@@ -126,6 +176,8 @@ bool Sort<T>::merge(T* arr, int length, function<bool(T&, T&)>& comparator) {
     
     return true;
 }
+
+
 
 template <typename T>
 void Sort<T>::internal_merge(T* arr, int length, function<bool(T&, T&)>& f) {
@@ -155,4 +207,6 @@ void Sort<T>::internal_merge(T* arr, int length, function<bool(T&, T&)>& f) {
         delete temp;
     }
 }
+
+
 
