@@ -34,11 +34,7 @@ Sort<T>::~Sort() {
 template <typename T>
 bool Sort<T>::bubble(T* arr, size_t length, function<bool(T&, T&)>& comparator) {
 
-    if ( arr == nullptr ) {
-        return false;
-    }
-
-    if (length <= 1) {
+    if ( arr == nullptr  || length <= 1) {
         return false;
     }
 
@@ -176,7 +172,6 @@ bool Sort<T>::merge(T* arr, int length, function<bool(T&, T&)>& comparator) {
     
     return true;
 }
-
 
 
 template <typename T>
