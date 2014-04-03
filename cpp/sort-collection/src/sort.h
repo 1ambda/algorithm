@@ -173,7 +173,6 @@ bool Sort<T>::merge(T* arr, int length, function<bool(T&, T&)>& comparator) {
     return true;
 }
 
-
 template <typename T>
 void Sort<T>::internal_merge(T* arr, int length, function<bool(T&, T&)>& f) {
 
