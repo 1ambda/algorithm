@@ -1,63 +1,134 @@
 #include <iostream>
-#include <functional>
-#include "heap.h"
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
-int get_parent(int index) {
-    return (index % 2) ? (index - 1) / 2 : (index / 2);
+void swap(int *lhs, int* rhs) {
+    int temp = *lhs;
+    *lhs = *rhs;
+    *rhs = temp;
 }
 
-void swap(int* a, int* b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+int get_parent(int child) {
+    return ((child % 2) == 0) ? (child - 1) / 2 : (child / 2);
 }
 
-// MIN Heap
-void sift_up(int* a, int root, int current) {
+// Ref : http://en.wikipedia.org/wiki/Heapsort#Pseudocode
+void sift_down(int* arr, int current, int last) {
 
-    while(current > root) {
-        if (a[get_parent(current)] <= a[current]) {
-            break;
+    int left;
+    int right;
+    int max;
+
+    while((current * 2) + 1 <= last) {
+        left = (current * 2) + 1;
+        right = (current * 2) + 2;
+        max = current;
+
+        if (arr[left] > arr[max]) {
+            max = left;
         }
 
-        swap(&a[get_parent(current)], &a[current]);
-        current = get_parent(current);
+        if (right <= last && arr[right] > arr[max]) {
+            max = right;
+        }
+
+        if (max != current) {
+            swap(&arr[current], &arr[max]);
+            current = max;
+        } else {
+            return;
+        }
     }
 }
 
-void heapify(int* a, int length) {
-    if (length < 2) {
+void sift_up(int* arr, int root, int current) {
+    
+    int parent;
+    
+    while (current > root) {
+        parent = get_parent(current);
+        if (arr[parent] >= arr[current])
+            return;
+
+        swap(&arr[parent], &arr[current]);
+        current = parent;
+    }
+}
+
+void heapify_top_down(int* arr, int length) {
+
+    int end = 1;
+
+    while(end < length) {
+        sift_up(arr, 0, end++);
+    }
+}
+
+void heapify_buttom_up(int* arr, int length) {
+    
+    int end = length - 1;
+    int current = get_parent(end);
+
+    while(current >= 0) {
+        sift_down(arr, current--, end);
+    }
+}
+
+void heap_sort(int* arr, int length) {
+    if (arr == nullptr || length <= 1) {
         return;
     }
 
-    for(int i = 1; i < length; i++) {
-        sift_up(a, 0, i);
+    // heapify
+    // heapify_top_down(arr, length);
+    heapify_buttom_up(arr, length);
+
+    // sort
+    int end = length - 1;
+    while(end > 0) {
+        swap(&arr[0], &arr[end--]);
+        sift_down(arr, 0, end);
     }
-};
+}
 
 
+void make_test_array(int* arr, int length, int max) {
+    if (arr == nullptr || length <= 1) {
+        return;
+    }
+
+    srand((unsigned int)time(NULL));
+    for(int i = 0; i < length; i++) {
+        arr[i] = rand() % max;
+    }
+}
+
+bool is_sorted_array(int* arr, int length) {
+    if (arr == nullptr || length < 1) {
+        return false;
+    }
+
+    for(int i = 0; i < length - 1; i++) {
+        if (arr[i] > arr[i+1])
+            return false;
+    }
+
+    return true;
+}
 
 int main(int argc, char *argv[])
 {
-    Heap a(20);
+    int size = 1000;
+    int* arr = new int[size];
 
-    // a.insert(0);
-    // a.insert(3);
-    // a.insert(5);
-    // a.insert(2);
-    // a.insert(1);
+    make_test_array(arr, size, size * 2);
+    std::cout << is_sorted_array(arr, size) << std::endl;
+    heap_sort(arr, size);
+    std::cout << is_sorted_array(arr, size) << std::endl;
 
-    // a.traverse();
-
-    int arr[5] = { 7, 6, 5, 4, 8};
-    heapify(arr, 5);
-
-    for(int i = 0; i < 5; i++) {
-        std::cout << arr[i] << std::endl;
-    }
-    
+    delete []arr;
     return 0;
 }
 

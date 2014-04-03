@@ -6,9 +6,15 @@ Algorithm Practice
 - Linked list
 - Double linked list
 - Stack
-- Queue
-- Binary search tree
 - Heap
+- Binary search tree
+
+- Heap sort
+- Merge sort
+- Quick sort
+- Selection sort
+- Bubble sort
+- Insertion sort
 
 ## 2. Java
 
