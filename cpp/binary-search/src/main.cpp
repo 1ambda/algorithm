@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 {
     int arr[10] = { 1, 2, 4, 5, 7, 10, 11, 17, 21, 25 };
 
-    // ensure that you save a sorted array
+    // ensure that you are using a sorted array
     std::cout << "index : " << binary_search(arr, 10, 21) << std::endl;
     
     return 0;
