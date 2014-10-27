@@ -10,11 +10,15 @@
 
 ## C++
 
+data structure
+
 - Linked list
 - Double linked list
 - Stack
 - Heap
 - Binary search tree
+
+sorting
 
 - Merge sort
 - Quick sort
