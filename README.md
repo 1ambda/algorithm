@@ -1,5 +1,4 @@
 # algorithm note
-===
 
 ## Scala
 
