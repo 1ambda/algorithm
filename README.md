@@ -1,9 +1,15 @@
-Algorithm Practice 
+# algorithm note
 ===
 
-## 1. C++
+## Scala
 
-#### Data Structure
+- Project Euler (4 / 450)
+
+## Java
+
+ - [Union Find](http://1ambda.github.io/union-find-algorithms-week-1/)
+
+## C++
 
 - Linked list
 - Double linked list
@@ -11,16 +17,9 @@ Algorithm Practice
 - Heap
 - Binary search tree
 
-#### Algorithm
-
-- Heap sort
 - Merge sort
 - Quick sort
 - Selection sort
 - Bubble sort
 - Insertion sort
-
-## 2. Java
-
-
 
