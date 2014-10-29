@@ -1,4 +1,4 @@
-package euler.Problem4
+package euler
 
 import org.scalatest._
 

@@ -1,4 +1,4 @@
-package euler.Problem1
+package euler
 
 object Problem1 extends App {
   def getMultiples(acc: Int)(max: Int)(n: Int): Int = {

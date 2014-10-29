@@ -1,4 +1,4 @@
-package euler.Problem4
+package euler
 
 object Problem4 extends App{
 
