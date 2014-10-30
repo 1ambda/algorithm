@@ -2,7 +2,7 @@
 
 ## Scala
 
-- Project Euler (4 / 450)
+- Project Euler (6 / 450)
 
 ## Java
 
