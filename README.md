@@ -2,7 +2,9 @@
 
 ## Scala
 
-- Project Euler (6 / 450)
+- Project Euler (8 / 450)
+- quick sort
+- random contraction
 
 ## Java
 
