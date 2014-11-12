@@ -2,7 +2,7 @@
 
 ## Scala
 
-- Project Euler (8 / 450)
+- Project Euler (10 / 450)
 - quick sort
 - random contraction
 
