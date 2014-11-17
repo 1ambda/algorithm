@@ -2,9 +2,10 @@
 
 ## Scala
 
-- Project Euler (10 / 450)
-- quick sort
-- random contraction
+- Project Euler (11 / 450)
+- [quick sort](http://1ambda.github.io/divide-and-conquer/)
+- [random contraction](http://1ambda.github.io/graphs-the-contraction-algorithm/)
+- [strongly connected components](http://1ambda.github.io/graph-search-and-connectivity/)
 
 ## Java
 
