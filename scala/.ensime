@@ -13,10 +13,10 @@
    :module-name "scala"
    :source-roots ("/home/anster/github/algorithm/scala/src/main/scala" "/home/anster/github/algorithm/scala/src/main/java" "/home/anster/github/algorithm/scala/src/test/scala" "/home/anster/github/algorithm/scala/src/test/java")
    :target "/home/anster/github/algorithm/scala/target/scala-2.11/classes"
-   :test-targets ("/home/anster/github/algorithm/scala/target/scala-2.11/test-classes")
+   :test-target "/home/anster/github/algorithm/scala/target/scala-2.11/test-classes"
    :depends-on-modules nil
    :compile-deps ("/home/anster/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.2.jar")
-   :runtime-deps nil
+   :runtime-deps ("/home/anster/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.2.jar")
    :test-deps ("/home/anster/.ivy2/cache/org.scalatest/scalatest_2.11/bundles/scalatest_2.11-2.2.1.jar" "/home/anster/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.2.jar" "/home/anster/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.2.jar")
    :reference-source-roots ("/home/anster/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.2-sources.jar" "/home/anster/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.2.1-sources.jar" "/home/anster/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.11.2-sources.jar" "/home/anster/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/srcs/scala-xml_2.11-1.0.2-sources.jar")))
  
