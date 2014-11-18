@@ -1,6 +1,6 @@
 package euler
 
-object Problem1 extends App {
+object Problem01 extends App {
   def getMultiples(acc: Int)(max: Int)(n: Int): Int = {
     if (max == 0) acc
     else if (max % n == 0) getMultiples(acc + max)(max - 1)(n)

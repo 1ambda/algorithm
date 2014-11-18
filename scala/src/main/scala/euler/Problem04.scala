@@ -1,6 +1,6 @@
 package euler
 
-object Problem4 extends App{
+object Problem04 extends App{
 
   def isPalindrome(s: String): Boolean = (s.length >= 2) && s == s.reverse
 

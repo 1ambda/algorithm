@@ -2,7 +2,7 @@ package euler
 
 import scala.math._
 
-object Problem9 extends App {
+object Problem09 extends App {
 
   val candidates = for {
     a <- 3 to 333                         // by the condition a < b < c

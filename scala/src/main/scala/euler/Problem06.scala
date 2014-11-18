@@ -1,6 +1,6 @@
 package euler
 
-object Problem6 extends App {
+object Problem06 extends App {
 
   def sumOfSquares(n: Long): Long = {
     n * (n + 1) * (2 * n + 1) / 6

@@ -2,7 +2,7 @@ package euler
 
 import scala.annotation.tailrec
 
-object Problem7 extends App {
+object Problem07 extends App {
 
   def isPrime(n: Int): Boolean = {
 
