@@ -1,4 +1,4 @@
-package coursera
+package coursera.quicksort
 
 import scala.io.Source
 import math._
@@ -6,7 +6,7 @@ import math._
 
 object quicksort extends App {
 
-  val path = "src/main/scala/coursera/QuickSort.txt"
+  val path = "src/main/scala/coursera/quicksort/QuickSort.txt"
   val f = Source.fromFile(path)
   val nums = f.getLines map { _.toInt } toArray // size: 10000
   var comparisons = 0

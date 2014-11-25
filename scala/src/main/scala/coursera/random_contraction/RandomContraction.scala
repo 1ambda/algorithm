@@ -1,4 +1,4 @@
-package coursera
+package coursera.random_contraction
 
 import scala.io.Source
 import scala.util.Random
@@ -55,7 +55,7 @@ object RandomContraction extends App {
 
   // you can download this file Here
   // http://spark-public.s3.amazonaws.com/algo1/programming_prob/kargerMinCut.txt
-  val path = "src/main/scala/coursera/kargerMinCut.txt"
+  val path = "src/main/scala/coursera/random_contraction/kargerMinCut.txt"
   val vertices: Map[Int, List[Int]] = readFile(path)
   val r = new Random() // stochastic simulation due to multiple trials 
 

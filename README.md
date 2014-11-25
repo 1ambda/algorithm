@@ -6,6 +6,7 @@
 - [quick sort](http://1ambda.github.io/divide-and-conquer/)
 - [random contraction](http://1ambda.github.io/graphs-the-contraction-algorithm/)
 - [strongly connected components](http://1ambda.github.io/graph-search-and-connectivity/)
+- [dijkstra shortest path](http://1ambda.github.io/dijkstra-heap-balanced-tree/)
 
 ## Java
 
