@@ -1,6 +1,6 @@
 package euler
 
-object Problem05 extends App {
+object Problem005 extends App {
 
   /*
    * based on http://www.scala-lang.org/old/node/47.html

@@ -2,7 +2,7 @@ package euler
 
 import scala.math._
 
-object Problem13 extends App {
+object Problem013 extends App {
   val problem =
     """37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538

@@ -1,6 +1,6 @@
 package euler
 
-object Problem03 extends App {
+object Problem003 extends App {
 
   def getFirstPrime(n: Long): Long = {
     val limit = n / 2 // caching the limit of recursion-count

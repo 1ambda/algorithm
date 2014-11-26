@@ -1,6 +1,6 @@
 package euler
 
-object Problem02 extends App {
+object Problem002 extends App {
 
   def fibo(n: Int): Int = n match {
     case 1 => 1

@@ -2,7 +2,7 @@ package euler
 
 import scala.math._
 
-object Problem10 extends App {
+object Problem010 extends App {
 
   // al even numbers are not the prime number except 2
   def isPrime(n: Int): Boolean = {

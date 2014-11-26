@@ -2,7 +2,7 @@
 
 ## Scala
 
-- Project Euler (16 / 450)
+- Project Euler (18 / 450)
 - [quick sort](http://1ambda.github.io/divide-and-conquer/)
 - [random contraction](http://1ambda.github.io/graphs-the-contraction-algorithm/)
 - [strongly connected components](http://1ambda.github.io/graph-search-and-connectivity/)

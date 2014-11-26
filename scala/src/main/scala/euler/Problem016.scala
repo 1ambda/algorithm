@@ -3,7 +3,7 @@ package euler
 import scala.math
 import scala.annotation.tailrec
 
-object Problem16 extends App {
+object Problem016 extends App {
   // calculate positive exp
   def power(n: Int, exp: Int): BigInt = {
     @tailrec

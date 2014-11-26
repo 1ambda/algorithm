@@ -2,7 +2,7 @@ package euler
 
 import scala.math
 
-object Problem12 extends App {
+object Problem012 extends App {
   def divisors(n: Int): List[Int] = {
     (1 to n/2).filter(n % _ == 0).toList :+ n
   }

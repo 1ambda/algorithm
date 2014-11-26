@@ -3,7 +3,7 @@ package euler
 import scala.math._
 import scala.annotation.tailrec
 
-object Problem14 extends App {
+object Problem014 extends App {
 
   // interesting collatz graph.
   // http://www.jasondavies.com/collatz-graph/

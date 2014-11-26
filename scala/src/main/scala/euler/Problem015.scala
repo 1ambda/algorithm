@@ -2,7 +2,7 @@ package euler
 
 import scala.annotation.tailrec
 
-object Problem15 extends App {
+object Problem015 extends App {
 
   @tailrec
   def recur(n: BigInt, until: BigInt, acc: BigInt): BigInt = n match {
