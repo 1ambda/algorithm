@@ -34,6 +34,7 @@ object Problem018 extends App {
     recur(t.length, 1)
   }
 
+  // brute force. 
   def allPath(t: Array[Int]): Set[Path] = {
     // in path, nodes are concatenated in reverse order to avoid performance prb
     def nextPath(p: Path): List[Path] = {
