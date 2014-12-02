@@ -24,13 +24,11 @@ object MedianMaintenance extends App {
 
     for (x <- xs) {
       // insert
-      if (!maxQ.isEmpty && x <= maxQ.head) {
-        maxQ.enqueue(x)
-      } else if (!minQ.isEmpty && x > minQ.head){
-        minQ.enqueue(x)
-      } else {
-        maxQ.enqueue(x)
-      }
+      if (!maxQ.isEmpty && x <= maxQ.head) maxQ.enqueue(x)
+      else if (!minQ.isEmpty && x > minQ.head) minQ.enqueue(x)
+      else maxQ.enqueue(x)
+      // in case of first 2 elements, just insert into maxQ.
+      // since we will make two heaps balanced, it doesn't matte
 
       // balance
       (maxQ.size - minQ.size) match {
