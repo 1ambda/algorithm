@@ -34,10 +34,16 @@ object TwoSum extends App {
 
   // using set(hashing), -100 ~ 100, 42s
   // using binary search to all t, -100 ~ 100, 17s
-  // too slow.
 
-  // but t is a range, we don't need to test all t
-  // -10000 - x <= y <= 10000 - x
+  // in our case, t is [-10000, 10000] => 2 * 10^5
+  // if we use hashing, running time is about O(n) * 2 * 10^5 where n = 1000000
+
+  // instead, just use sorting and checking strategy
+  // the idea is that
+
+  // since t is [-10000, 10000], -10000 - x <= t <= 10000 - x
+  // if we have an sorted array
+  // every x, we can find the valid y set which is relatively small size
   def solution = {
     val xs: Array[Long] = parse(path)
     // val xs = Array(-20000l, 20000l, 40000l)
@@ -45,7 +51,7 @@ object TwoSum extends App {
     val maxT = 10000l
     var s: Set[Long] = Set()
 
-    // valid y indices
+    // valid y indices. 0 <= index < length
     def yIndices(minY: Long, maxY: Long) = {
       val left = binSearch(xs, minY)
       val right = binSearch(xs, maxY)
