@@ -41,7 +41,7 @@ object TwoSum extends App {
   // instead, just use sorting and checking strategy
   // the idea is that
 
-  // since t is [-10000, 10000], -10000 - x <= t <= 10000 - x
+  // since t is [-10000, 10000], -10000 - x <= y <= 10000 - x
   // if we have an sorted array
   // every x, we can find the valid y set which is relatively small size
   def solution = {
