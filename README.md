@@ -15,8 +15,13 @@ by *Tim Roughgarden*
 
 by *Robert Sedgewick*
 
-(1) [1. Union Find](http://1ambda.github.io/union-find-algorithms-week-1/)  
-(2) [2. Analysis of Algorithms](http://1ambda.github.io/analysis-of-algorithms/)  
+(1) [Union Find](http://1ambda.github.io/union-find-algorithms-week-1/)  
+(2) [Analysis of Algorithms](http://1ambda.github.io/analysis-of-algorithms/) 
+
+### **Algorithms, Part 2**
+by *Robert Sedgewick*
+
+(1) [Spanning Tree, Shortest Paths](http://1ambda.github.io/graph-challenges-minimum-spanning-trees)  
 
 ### Scala
 
