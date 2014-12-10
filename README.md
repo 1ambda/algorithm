@@ -25,7 +25,7 @@ by *Robert Sedgewick*
 
 ### Scala
 
-- Project Euler (23 / 450)
+- Project Euler (25 / 450)
 - quick sort
 - random contraction
 - strongly connected components
