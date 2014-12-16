@@ -22,6 +22,7 @@ by *Robert Sedgewick*
 by *Robert Sedgewick*
 
 (1) [Spanning Tree, Shortest Paths](http://1ambda.github.io/graph-challenges-minimum-spanning-trees)  
+(2) [Radix Sort, Suffix Sort](http://1ambda.github.io/radix-sort-suffix-sort)  
 
 ### Scala
 
@@ -36,6 +37,7 @@ by *Robert Sedgewick*
 ### Java
 
  - Union Find
+ - LSD, MSD, LSR
 
 ### C++
 
