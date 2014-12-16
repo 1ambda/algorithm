@@ -38,7 +38,8 @@ by *Robert Sedgewick*
 ### Java
 
  - Union Find
- - LSD, MSD, LSR
+ - LSD, MSD, Longest Repeated Substrings
+ - R-way, Ternary Tries
 
 ### C++
 
