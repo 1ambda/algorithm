@@ -24,6 +24,7 @@ by *Robert Sedgewick*
 (1) [Spanning Tree, Shortest Paths](http://1ambda.github.io/graph-challenges-minimum-spanning-trees)  
 (2) [Radix Sort, Suffix Sort](http://1ambda.github.io/radix-sort-suffix-sort)  
 (3) [R-way, Ternary Tries](http://1ambda.github.io/r-way-ternary-search-tries/)   
+(4) [KMP, Boyer-Moore, Rabin-Karp](http://1ambda.github.io/substring-search/)   
 
 ### Scala
 
