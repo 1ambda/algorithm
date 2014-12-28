@@ -25,6 +25,7 @@ by *Robert Sedgewick*
 (2) [Radix Sort, Suffix Sort](http://1ambda.github.io/radix-sort-suffix-sort)  
 (3) [R-way, Ternary Tries](http://1ambda.github.io/r-way-ternary-search-tries/)   
 (4) [KMP, Boyer-Moore, Rabin-Karp](http://1ambda.github.io/substring-search/)   
+(5) [Maximum Flow (Ford-Fulkerson)](http://1ambda.github.io/maximum-flow/)   
 
 ### Scala
 
