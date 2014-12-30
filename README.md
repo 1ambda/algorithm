@@ -26,6 +26,7 @@ by *Robert Sedgewick*
 (3) [R-way, Ternary Tries](http://1ambda.github.io/r-way-ternary-search-tries/)   
 (4) [KMP, Boyer-Moore, Rabin-Karp](http://1ambda.github.io/substring-search/)   
 (5) [Maximum Flow (Ford-Fulkerson)](http://1ambda.github.io/maximum-flow/)   
+(6) [Data Compression, Huffman, LZW](http://1ambda.github.io/algorithm-data-compression/)   
 
 ### Scala
 
